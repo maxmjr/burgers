@@ -1,0 +1,193 @@
+.section__menu {
+    background: url(../img/bg/bg5.jpg) center no-repeat;
+    background-size: cover;
+    position: relative;
+}
+.section__title--menu {
+    font-weight: 100;
+    position: absolute;
+    top: rem(100px);
+    left: rem(90px);
+    color: white;
+    letter-spacing: 2px;
+    @include phones {
+        top: rem(30px);
+        left: rem(10px);
+    }
+}
+.menu__right {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    color: white;
+    font-size: rem(40px);
+    font-family: 'gagalinregular';
+    display: flex;
+    overflow: hidden;
+}
+.menu__content {
+    box-sizing: border-box;
+    border: 1px solid black;
+    width: rem(80px);
+    position: relative;
+    cursor: pointer;
+    &:hover .menu__title {
+        color: $yellow;
+    }
+    &:before {
+        content: "";
+        height: 100%;
+        width: rem(80px);
+        position: absolute;
+        left: 0;
+        top: 0;
+        opacity: .7;
+    }
+}
+.menu__content:nth-child(1) {
+    &:before {
+        content: "";
+        height: 100%;
+        width: rem(80px);
+        position: absolute;
+        left: 0;
+        top: 0;
+        background: url(../img/content/menu1.jpg) center no-repeat;
+        background-size: cover;
+        opacity: .9;
+    }
+}
+.menu__content:nth-child(2) {
+    &:before {
+        content: "";
+        height: 100%;
+        width: rem(80px);
+        position: absolute;
+        left: 0;
+        top: 0;
+        background: url(../img/content/menu2.jpg) center no-repeat;
+        background-size: cover;
+        opacity: .9;
+    }
+}
+.menu__content:nth-child(3) {
+    &:before {
+        content: "";
+        height: 100%;
+        width: rem(80px);
+        position: absolute;
+        left: 0;
+        top: 0;
+        background: url(../img/content/menu3.jpg) center no-repeat;
+        background-size: cover;
+        opacity: .9;
+    }
+}
+.menu__content--active {
+    width: rem(540px);
+    @include phones {
+        width: rem(250px);
+    }
+}
+.menu__content--active .menu__title {
+    position: relative;
+    top: rem(280px);
+    left: rem(-240px);
+    text-align: right;
+    color: $yellow;
+    @include tablets {
+        top: rem(380px);
+    }
+    @include phones {
+        top: rem(420px);
+        left: rem(-80px);
+    }
+}
+.menu__content--active:nth-child(1) {
+    background: url(../img/content/menu1.jpg) left no-repeat;
+    background-size: 80px 100%;
+}
+.menu__content--active:nth-child(2) {
+    background: url(../img/content/menu2.jpg) left no-repeat;
+    background-size: 80px 100%;
+}
+.menu__content--active:nth-child(3) {
+    background: url(../img/content/menu3.jpg) left top no-repeat;
+    background-size: 80px 100%;
+}
+.menu__content--active .menu__text {
+    transform: translate(0, -160px);
+    font-size: rem(14px);
+    padding: rem(50px) rem(50px) rem(50px) rem(100px);
+    overflow: hidden;
+    display: flex;
+    position: relative;
+    @include phones {
+        padding: 0 0 0 rem(80px);
+        top: rem(300px);
+    }
+    @include tablets {
+        top: rem(120px);
+    }
+}
+.menu__title {
+    transform: rotateZ(270deg);
+    white-space: nowrap;
+    position: relative;
+    font-weight: 100;
+    text-align: right;
+    top: rem(620px);
+    cursor: pointer;
+    @include smolHigth  {
+        top: rem(480px);
+    }
+    @include phones {
+        top: rem(520px);
+    }
+}
+
+.menu__text {
+    font-size: rem(14px);
+    font-family: 'ubuntulight';
+    overflow: hidden;
+    display: none;
+    position: relative;
+    margin-top: rem(100px);
+}
+.menu__content--active:nth-child(1) {
+    &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: rem(80px);
+        background: $dark;
+        width: rem(460px) + rem(80px);
+        height: 100%;
+        opacity: .9;
+    }
+}
+.menu__content--active:nth-child(2) {
+    &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: rem(80px);
+        background: $dark;
+        width: rem(460px) + rem(80px);
+        height: 100%;
+        opacity: .9;
+    }
+}
+.menu__content--active:nth-child(3) {
+    &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: rem(80px);
+        background: $dark;
+        width: rem(460px) + rem(80px);
+        height: 100%;
+        opacity: .9;
+    }
+}

@@ -1,0 +1,181 @@
+.team {
+    background: url(../img/bg/bg4.jpg) 50% 0 no-repeat;
+    background-size: cover;
+    position: relative;
+}
+.team__right-content {
+    position: relative;
+    height: 100%;
+    width: 50%;
+    z-index: 3;
+    color: white;
+    display: flex;
+    justify-content: center;
+    background-color: rgba($dark, $alpha: .9);
+    padding-left: rem(100px);
+    padding-right: rem(80px);
+    padding-top: rem(110px);
+    position: absolute;
+    right: 0%;
+    top: 0;
+    @include tablets {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+        align-content: center;
+        padding-right: 0;
+        padding-left: 0;
+    }
+}
+.team__continer {
+    display: flex;
+    flex-direction: column;
+    @include tablets {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        flex-direction: column;
+        width: 50%;
+    }
+    @include phones {
+        width: 100%;
+    }
+}
+.team__list {
+    @include tablets {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-content: center;
+    }
+}
+.section__title--team {
+    font-weight: 100;
+    margin-bottom: rem(30px);
+    @include phones {
+        font-size: rem(50px);
+    }
+}
+.team__item {
+    font-family: 'gagalinregular';
+    font-weight: 100;
+    font-size: rem(14px);
+    @include tablets {
+        text-align: center;
+        justify-content: center;
+        align-content: center;
+        flex-direction: column;
+    }
+    cursor: pointer;
+}.svg_com {
+    transform: scale(1);
+    transform-origin: 50%;
+    transform: rotateX(180deg);
+    margin-right: rem(5px);
+    &:hover {
+        transform: rotateX(360deg);
+        transition: .3s;
+    }
+}
+.team__item {
+    height: rem(20px);
+    transition: .3s;
+    overflow: hidden;
+    margin-bottom: rem(20px);
+    @include phones {
+        height: rem(30px);
+    }
+    &:hover {
+        color: $yellow;
+        transition: .3s;
+    }
+}
+.team__item--active {
+    height: auto;
+    overflow: visible;
+    color: $yellow;
+    transition: .3s;
+    .team__undercaption {
+        color: white;
+    }
+    .text__undertext {
+        color: white;
+    }
+    .team__undercaption {
+        opacity: 1;
+    }
+    .text__undertext {
+        opacity: 1;
+    }
+    .team__container-img {
+        opacity: 1;
+    }
+}
+.team__undercaption {
+    opacity: 0;
+}
+.text__undertext {
+    opacity: 0;
+}
+.team__container-img {
+    opacity: 0;
+}
+.team__item--active  .svg_com{
+    transform: rotateX(360deg);
+    transition: .3s;
+}
+.team__img {
+    width: rem(90px);
+    height: rem(90px);
+    border-radius: 100%;
+    visibility: hidden;
+}
+.team__item {
+    margin-bottom: 25px;
+}
+.team__link {
+    @include phones {
+        font-size: rem(25px);
+    }
+}
+.team__container-img {
+    width: rem(80px);
+    height: rem(80px);
+    margin-top: rem(20px);
+    background: url(../img/content/face.jpg) 65% 0 no-repeat;
+    background-size: cover;
+    border-radius: 50%;
+    margin-right: rem(10px);
+    margin-left: rem(40px);
+    @include tablets {
+        margin: 0 auto;
+        margin-bottom: rem(10px);
+        margin-top: rem(10px);
+    }
+}
+.team__undercaption {
+    font-family: 'ubuntubold';
+    @include tablets {
+        margin-bottom: rem(10px);
+    }
+}
+.text__undertext {
+    font-family: 'ubuntulight';
+}
+.team__underinfo {
+    display: flex;
+    align-content: flex-start;
+    flex-direction: row;
+    @include tablets {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+    }
+}
+.text {
+    display: flex;
+    flex-direction: column;
+    align-content: flex-end;
+    justify-content: flex-end;
+}

@@ -1,0 +1,209 @@
+.form {
+    background: url(../img/bg/bg7.jpg) center no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    @include tablets {
+        padding: 0 rem(100px) 0 rem(100px);
+    }
+    @include phones {
+        padding-left: rem(35px);
+        padding-right: rem(10px);
+    }
+}
+.form .pp-tableCell{
+    align-items: center;
+}
+.pp-tableCell
+.section__title--form {
+    text-align: center;
+    @include phones {
+        font-size: rem(56px);
+    }
+}
+.forms {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    @include tablets {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+}
+.form__input {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.input__name-phone {
+    display: flex;
+    flex-wrap: nowrap;
+    @include tablets {
+        margin: 0 auto;
+        width: 100%;
+    }
+    .input__name {
+        width: 100%;
+        border-radius: rem(5px);
+        padding: rem(10px) rem(20px) rem(10px) rem(20px);
+        box-sizing: border-box;
+        outline: none;
+        border: 2px solid transparent;
+        &:focus {
+        border: 2px solid $yellow;
+        }
+    }
+}
+.input__label--name {
+    @include tablets {
+        margin: 0 auto;
+        width: 100%;
+    }
+}
+.input__name:nth-child(1) {
+    @include tablets {
+        margin-right: 0;
+    }
+}
+.input__label {
+    color: white;
+    margin-right: 20px;
+    flex-wrap: nowrap;
+}
+.input__street {
+    margin-bottom: 20px;
+    @include tablets {
+        margin: 0 auto;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .street__input {
+        width: 100% - 4%;
+        border-radius: rem(5px);
+        padding: rem(10px) rem(20px);
+        box-sizing: border-box;
+        outline: none;
+        border: 2px solid transparent;
+        &:focus {
+        border: 2px solid $yellow;
+        }
+        margin-bottom: rem(20px);
+        @include tablets {
+            margin: 0 auto;
+        }
+        @include tablets {
+            width: 100% - 4%;
+        }
+        @include phones {
+            width: 100% - 6%;
+        }
+    }
+}
+.input__home {
+    display: flex;
+    flex-wrap: nowrap;
+    @include tablets {
+        margin: 0 auto;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .home__input {
+        width: 100%;
+        border-radius: rem(5px);
+        padding: rem(10px) rem(20px) rem(10px) rem(20px);
+        outline: none;
+        border: 2px solid transparent;
+        &:focus {
+        border: 2px solid $yellow;
+        }
+    }
+}
+.form__comment {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    @include tablets {
+        margin: 0 auto;
+    }
+}
+.comment__text {
+    width: 100%;
+    resize: none;
+    height: rem(120px);
+    padding: rem(10px) rem(20px) rem(10px) rem(20px);
+    outline: none;
+    border-radius: rem(5px);
+    border: rem(.5px) solid lightgray;
+    @include tablets {
+    }
+    &:focus {
+        border: rem(2px) solid $yellow;
+        box-sizing: border-box;
+    }
+}
+.form__radio {
+    margin-top: 20px;
+    margin-bottom: rem(20px);
+    transform: translateX(rem(-20px));
+    @include phones {
+        margin: 0 auto;
+        margin-bottom: 20px;
+        margin-top: 20px;
+        text-align: right;
+    } 
+}
+.radio__radiobutton {
+    height: rem(15px);
+    width: rem(15px);
+    opacity: 0;
+    display: none;
+}
+.form__label {
+    margin-right: rem(20px);
+    color: #e1e1e1;
+    padding-top: rem(10px);
+    padding-left: rem(30px);
+    background: url(../img/icons/el3.png) no-repeat 0% 90%;
+    &--checkbox {
+        color: white;
+        padding-left: 30px;
+        background: url(../img/icons/rec1.png) no-repeat 0% 90%;
+    }
+    &:nth-child(2) {
+        margin-left: rem(20px);
+    }
+}
+.radio__radiobutton:checked + .form__label {
+    background: url(../img/icons/el4.png) no-repeat 0% 90%;
+}
+.check__checkbox {
+    display: none;  
+}
+.check__checkbox:checked + .form__label--checkbox {
+    background: url(../img/icons/rec2.png) no-repeat 0% 90%;
+}
+.form__button {
+    display: flex;
+    transform: translateY(30px);
+    @include phones {
+		margin: 0 auto;
+    }
+}
+.form__clear-link {
+    color: white;
+    margin-left: 20px;
+    padding: rem(10px) rem(17px);
+    font-size: rem(16px);
+    letter-spacing: 1px;
+    text-decoration: none;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+.form__check {
+    @include phones {
+		margin: 0 auto;
+    } 
+}
